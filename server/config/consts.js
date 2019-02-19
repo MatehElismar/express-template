@@ -3,6 +3,6 @@
 module.exports = {
     url: '',
     db: {
-        uri: ''
+        uri: 'mongodb://localhost/<dbname>'
     }
 }

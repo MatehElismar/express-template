@@ -29,4 +29,7 @@ enroute(app);
 
 app.listen(app.get('port'), (hostname)=>{
     console.log(`Server running on ${hostname || 'localhost'}:${app.get('port')}`);
+    if (process.send) {
+        process.send({ event:'online', url:'http://localhost:80/' });
+    }
 })
